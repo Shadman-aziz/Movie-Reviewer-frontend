@@ -19,7 +19,7 @@ const AddMovieForm = ({onMovieAdd}) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/api/movies/by-id', movieData);
+      const response = await axios.post('http://localhost:4000/api/review/by-id', movieData);
       onMovieAdd(response.data); // Assuming the response data is the new movie object
       setMovieData({ id: '', myScore: '', myReview: '' }); // Reset form
     } catch (error) {
@@ -58,7 +58,7 @@ const AddMovieForm = ({onMovieAdd}) => {
         label="Your Review"
         name="myReview"
         multiline
-        rows={4} // Adjust this number as needed
+        rows={4}
         variant="outlined"
         value={movieData.myReview}
         onChange={handleChange}

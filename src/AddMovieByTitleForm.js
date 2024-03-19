@@ -20,7 +20,7 @@ const AddMovieByTitleForm = ({onMovieAdd}) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-        const response = await axios.post('http://localhost:4000/api/movies/by-title', movieData);
+        const response = await axios.post('http://localhost:4000/api/review/by-title', movieData);
       onMovieAdd(response.data); // Assuming the response data is the new movie object
       setMovieData({ title: '', year: '', myScore: '', myReview: '' }); // Reset form
     } catch (error) {

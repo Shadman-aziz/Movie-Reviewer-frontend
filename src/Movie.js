@@ -65,7 +65,7 @@ const Movie = ({ movie, onMovieDelete, onMovieEdit }) => {
           Rating: {movie.imdbRating}
         </Typography>
         <Typography variant="body2">
-          Score: {movie.myScore}
+          My Score: {movie.myScore}
         </Typography>
         <Typography variant="body2">
           Review: {movie.myReview}
